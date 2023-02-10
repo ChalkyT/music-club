@@ -1,10 +1,23 @@
 <script>
+	import { onMount } from "svelte";
+
 	export let name;
+
+	let apimessage = 'Waiting for server...';
+
+	onMount(async  () => {
+		let response = await fetch('api/greet')
+				.then((res) => res.json());
+		console.log(response);
+		apimessage = JSON.stringify(response);
+	});
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h3>Data from server API</h3>
+	{apimessage}
 </main>
 
 <style>
