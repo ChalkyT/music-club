@@ -2,16 +2,26 @@
 Requires python3.
 
 ## Dev
-Make sure `albumclub/static/frontend` and `albumclub/staticfiles` exist.
 
-In one terminal and in the root dir run the backend with `DJANGO_DEBUG=ON python manage.py runserver`.
+From the root of the project folder:
+
+Create a virtual environment and activate it (if you want.)
+
+Run `pip install -r REQUIREMENTS.txt` or `poetry install`
+
+Run `mkdir albumclub/static`
+
+Run `python manage.py migrate`
+
+Run `python manage.py createsuperuser`
+
+In the root dir run the backend with `DJANGO_DEBUG=ON python manage.py runserver`.
 
 In another terminal and in `/frontend` run the frontend with `npm run dev` to keep front end code in sync.
 
-Svelte files are located in `/frontend/src`
+Run `python manage.py collectstatic`
 
-Create a super user running in a terminal
-`python manage.py createsuperuser`
+Svelte files are located in `/frontend/src`
 
 Now if you try to hit `localhost:8000`, you will be redirected to `http://localhost:8000/accounts/login/?next=/`.
 
