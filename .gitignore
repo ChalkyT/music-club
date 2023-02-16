@@ -4,6 +4,7 @@
 __pycache__/
 static/
 staticfiles/
+db.sqlite3
 *.py[cod]
 *$py.class
 
