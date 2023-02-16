@@ -2,6 +2,8 @@
 Requires python3.
 
 ## Dev
+Make sure `albumclub/static/frontend` and `albumclub/staticfiles` exist.
+
 In one terminal and in the root dir run the backend with `DJANGO_DEBUG=ON python manage.py runserver`.
 
 In another terminal and in `/frontend` run the frontend with `npm run dev` to keep front end code in sync.

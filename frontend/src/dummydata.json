@@ -1,0 +1,32 @@
+{
+  "albums": [
+    {
+      "id": "1",
+      "user_id": "1001",
+      "title": "10000 Days",
+      "artist": "Tool",
+      "artwork": "https://upload.wikimedia.org/wikipedia/en/f/f8/10000Days.jpg",
+      "genre": "Progressive Metal/Rock",
+      "about": "Overrated? Not at all! It's not my fault you can't pay attention to songs over 3 minutes long.",
+      "tracks": "title,length\ntrack1,03:00\ntrack2,04:00",
+      "deleted": false,
+      "active": true,
+      "created": "20/02/23",
+      "expiry": "20/03/23"
+    },
+    {
+      "id": "2",
+      "user_id": "1002",
+      "title": "American Idiot",
+      "artist": "Green Day",
+      "artwork": "https://upload.wikimedia.org/wikipedia/en/e/ed/Green_Day_-_American_Idiot_album_cover.png",
+      "genre": "Punk Rock",
+      "about": "Think they're mad about politics or something?",
+      "tracks": "title,length\ntrack1,03:00\ntrack2,04:00\ntrack3,03:00\ntrack4,04:00",
+      "deleted": false,
+      "active": true,
+      "created": "20/02/23",
+      "expiry": "20/03/23"
+    }
+  ]
+}
