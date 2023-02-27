@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from "svelte";
 	import Album from './components/album.svelte';
+	import 'normalize.css';
 
 	export let name;
 
