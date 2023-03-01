@@ -23,7 +23,10 @@
 
 <style>
 	main {
-		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		margin: 0 auto;
+		font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
 	}
 </style>

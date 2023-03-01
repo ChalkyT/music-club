@@ -37,8 +37,12 @@
 
 
 <style>
+
     .album-container {
-        width: 100%;
-        border: #FF0000 solid 1px;
+        text-align: center;
+        width: 75%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
     }
 </style>
