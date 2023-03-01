@@ -1,5 +1,6 @@
 <script>
     import CommentDisplay from "../molecules/CommentDisplay.svelte";
+    import CommentForm from "../molecules/CommentForm.svelte";
 
     // Hardcoded data for now.
     let comments = Array(5).fill({
@@ -9,6 +10,7 @@
 </script>
 
 <div class="comments-container">
+    <CommentForm />
     <CommentDisplay {comments} />
 </div>
 
