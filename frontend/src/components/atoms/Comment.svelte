@@ -5,6 +5,7 @@
 </script>
 
 <div class="comment" id={id}>
+<!--    Don't show user info if there's no comments-->
     {#if !user}
         <p>{comment}</p>
     {:else}
