@@ -2,6 +2,7 @@
 	import { onMount } from "svelte";
 	import Album from './components/organisms/Album.svelte';
 	import 'normalize.css';
+	import Comments from "./components/organisms/Comments.svelte";
 
 	export let name;
 
@@ -17,6 +18,7 @@
 
 <main>
 	<Album />
+	<Comments />
 	<h3>Data from server API</h3>
 	{apiMessage}
 </main>
