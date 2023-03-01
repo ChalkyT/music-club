@@ -8,6 +8,9 @@
         "comment": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus metus orci, at dignissim arcu euismod ullamcorper. Curabitur venenatis pulvinar vulputate. Maecenas pellentesque ligula ut rutrum placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas sit amet lobortis nisl. Mauris aliquet, risus vel malesuada pharetra, nulla magna pulvinar nisi, et posuere felis nisi et turpis. Suspendisse eu finibus massa. Fusce a sem ex. Aliquam nullam.'
     });
 
+    // Uncomment me and comment line 6-9 to test CommentDisplay and CommentForm with no existing comments
+    // let comments = [];
+
     // When user submits a comment, add it to comments state and thank the user.
     // TODO: Create POST request to API (or JSON file for now) with new comment.
     const handleCommentSubmit = (e) => {
@@ -22,7 +25,7 @@
     {#key comments}
         <CommentForm on:commentsubmit={handleCommentSubmit}/>
     {/key}
-    <CommentDisplay {comments} />
+    <CommentDisplay bind:comments={comments} />
 </div>
 
 <style>
