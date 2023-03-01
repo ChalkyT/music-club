@@ -1,6 +1,6 @@
 <script>
-    import AlbumHeader from "../molecules/AlbumHeader.svelte";
-    import AlbumInfo from "../molecules/AlbumInfo.svelte";
+    import AlbumHeader from "../molecules/Album/AlbumHeader.svelte";
+    import AlbumInfo from "../molecules/Album/AlbumInfo.svelte";
 
     // Hardcoded data for now. TODO: Implement loading data from json/API with defaults for missing data.
     let album = {

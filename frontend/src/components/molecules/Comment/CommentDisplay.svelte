@@ -1,6 +1,6 @@
 <script>
-    import Comment from "../atoms/Comment.svelte";
-    import CommentCount from "../atoms/CommentCount.svelte";
+    import Comment from "../../atoms/Comment/Comment.svelte";
+    import CommentCount from "../../atoms/Comment/CommentCount.svelte";
 
     export let comments;
 </script>

@@ -1,6 +1,6 @@
 <script>
-    import AlbumArt from "../atoms/AlbumArt.svelte";
-    import AlbumAbout from "../atoms/AlbumAbout.svelte";
+    import AlbumArt from "../../atoms/Album/AlbumArt.svelte";
+    import AlbumAbout from "../../atoms/Album/AlbumAbout.svelte";
 
     export let imageUrl = 'https://placekeanu.com/250/g';
     export let title = 'Album';

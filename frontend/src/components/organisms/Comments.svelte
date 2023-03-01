@@ -1,6 +1,6 @@
 <script>
-    import CommentDisplay from "../molecules/CommentDisplay.svelte";
-    import CommentForm from "../molecules/CommentForm.svelte";
+    import CommentDisplay from "../molecules/Comment/CommentDisplay.svelte";
+    import CommentForm from "../molecules/Comment/CommentForm.svelte";
 
     // Hardcoded data for now. TODO: Implement loading data from json/API with defaults for missing data.
     let comments = Array(5).fill({

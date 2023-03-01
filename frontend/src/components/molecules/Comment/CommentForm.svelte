@@ -1,6 +1,6 @@
 <script>
-    import CommentInput from "../atoms/CommentInput.svelte";
-    import CommentSubmit from "../atoms/CommentSubmit.svelte";
+    import CommentInput from "../../atoms/Comment/CommentInput.svelte";
+    import CommentSubmit from "../../atoms/Comment/CommentSubmit.svelte";
     import {createEventDispatcher} from "svelte";
 
     const dispatch = createEventDispatcher();
