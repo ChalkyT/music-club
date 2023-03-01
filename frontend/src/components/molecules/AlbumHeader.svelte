@@ -2,9 +2,9 @@
     import AlbumTitle from "../atoms/AlbumTitle.svelte";
     import AlbumGenre from "../atoms/AlbumGenre.svelte";
 
-    export let title;
-    export let artist;
-    export let genre;
+    export let title = 'Album';
+    export let artist = 'Artist';
+    export let genre = 'Genre';
 </script>
 
 <div class="album-header">
