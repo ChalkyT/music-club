@@ -1,8 +1,8 @@
 <script>
-    import AlbumHeader from "../molecules/AlbumHeader.svelte";
-    import AlbumInfo from "../molecules/AlbumInfo.svelte";
+    import AlbumHeader from "../molecules/Album/AlbumHeader.svelte";
+    import AlbumInfo from "../molecules/Album/AlbumInfo.svelte";
 
-    // Hardcoded data for now. TODO: Implement loading data from json with defaults for missing data.
+    // Hardcoded data for now. TODO: Implement loading data from json/API with defaults for missing data.
     let album = {
         "art": 'https://upload.wikimedia.org/wikipedia/en/f/f8/10000Days.jpg',
         "title": '10000 Days',
