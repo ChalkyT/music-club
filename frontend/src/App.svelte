@@ -3,6 +3,7 @@
 	import Album from './components/organisms/Album.svelte';
 	import 'normalize.css';
 	import Comments from "./components/organisms/Comments.svelte";
+	import Header from "./components/organisms/Header.svelte";
 
 	export let name;
 
@@ -17,6 +18,7 @@
 </script>
 
 <main>
+	<Header />
 	<Album />
 	<Comments />
 	<h3>Data from server API</h3>
