@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'rest_framework',
-    "albumclub.spa",
-    "albumclub.api",
+    'rest_framework', #Adding the rest_framework app
+    "albumclub.spa", 
+    "albumclub.api", #Adding the api app for Django to be able to find / makemigrations
 ]
 
 MIDDLEWARE = [
