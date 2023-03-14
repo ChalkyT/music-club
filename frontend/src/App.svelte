@@ -1,18 +1,11 @@
 <script>
-	import { onMount } from "svelte";
-	import Album from './components/organisms/Album.svelte';
 	import 'normalize.css';
-	import Comments from "./components/organisms/Comments.svelte";
-
-	export let name;
-
+    import {Router} from "svelte-router-spa";
+    import {routes} from "./routes";
 
 </script>
 
-<main>
-	<Album />
-	<Comments />
-</main>
+<Router {routes} />
 
 <style>
 	main {

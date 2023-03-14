@@ -29,7 +29,7 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    re_path(r'.*', SpaView.as_view())  # Route non existent paths to svelte
+    re_path(r'.*', SpaView.as_view())  # Route non existent URLs to svelte
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
