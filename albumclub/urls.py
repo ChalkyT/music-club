@@ -14,10 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-
+from django.urls import path, include, re_path
 from albumclub.spa.views import SpaView
-# from albumclub.api.views import GreetingApi
 from albumclub.api import views #this imports the views from views.py for the api app
 from rest_framework.urlpatterns import format_suffix_patterns
 
@@ -25,11 +23,13 @@ from rest_framework.urlpatterns import format_suffix_patterns
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-    # path('api/greet', GreetingApi.as_view()),
-    path("", SpaView.as_view(), name="spa"),
     path('api/albums/', views.all_albums), #passing in the all_albums function 
     path('api/albums/<int:id>', views.album_detail), #adding parameter of type 'int' this will link up with album_detail function in view.py
+    path("", SpaView.as_view(), name="spa"),
+]
+
+urlpatterns += [
+    re_path(r'.*', SpaView.as_view())  # Route non existent paths to svelte
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
-#
