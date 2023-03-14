@@ -1,32 +1,34 @@
 <script>
     import AlbumHeader from "../molecules/Album/AlbumHeader.svelte";
     import AlbumInfo from "../molecules/Album/AlbumInfo.svelte";
+    import {onMount} from "svelte";
 
-    // Hardcoded data for now. TODO: Implement loading data from json/API with defaults for missing data.
-    let album = {
-        "art": 'https://upload.wikimedia.org/wikipedia/en/f/f8/10000Days.jpg',
-        "title": '10000 Days',
-        "artist": 'Tool',
-        "genre": 'Progressive Metal/Rock',
-        "about": 'Overrated? Not at all! It\'s not my fault you can\'t pay attention to songs over 3 minutes long.'
-    }
+	async function getAlbum() {
+		let response = await fetch('api/albums/1');
+        let data = await response.json();
+        console.log(data.albums);
+        return data.albums;
+	}
 </script>
 
-<div class="album-container">
-    <header>
-        <AlbumHeader
-                title={album.title}
-                artist={album.artist}
-                genre={album.genre}
-        />
-    </header>
+{#await getAlbum()}
+	<p>...waiting</p>
+{:then data}
+	<div class="album-container">
+        <header>
+            <AlbumHeader
+                    title={data.title}
+                    artist={data.artist}
+                    genre={data.genre}
+            />
+        </header>
 
     <main>
         <AlbumInfo
-                title={album.title}
-                artist={album.artist}
-                imageUrl={album.art}
-                about={album.about}
+                title={data.title}
+                artist={data.artist}
+                imageUrl={data.artwork}
+                about={data.about}
         />
     </main>
 
@@ -34,6 +36,9 @@
 
     </footer>
 </div>
+{:catch error}
+	<p>An error occurred!</p>
+{/await}
 
 
 <style>
