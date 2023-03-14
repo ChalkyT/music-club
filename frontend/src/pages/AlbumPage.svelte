@@ -3,7 +3,6 @@
 	import Comments from "../components/organisms/Comments.svelte";
 
 	export let currentRoute;
-	export let params;
 
 	async function getAlbum(id) {
         try {
@@ -14,6 +13,7 @@
             throw new Error('Album not found')
         }
 	}
+
 </script>
 
 <main>
