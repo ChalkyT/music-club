@@ -1,27 +1,18 @@
 <script>
     import AlbumHeader from "../molecules/Album/AlbumHeader.svelte";
     import AlbumInfo from "../molecules/Album/AlbumInfo.svelte";
-    import {onMount} from "svelte";
 
-	async function getAlbum() {
-		let response = await fetch('api/albums/1');
-        let data = await response.json();
-        console.log(data.albums);
-        return data.albums;
-	}
+    export let data;
 </script>
 
-{#await getAlbum()}
-	<p>...waiting</p>
-{:then data}
-	<div class="album-container">
-        <header>
-            <AlbumHeader
-                    title={data.title}
-                    artist={data.artist}
-                    genre={data.genre}
-            />
-        </header>
+<div class="album-container">
+    <header>
+        <AlbumHeader
+                title={data.title}
+                artist={data.artist}
+                genre={data.genre}
+        />
+    </header>
 
     <main>
         <AlbumInfo
@@ -36,10 +27,6 @@
 
     </footer>
 </div>
-{:catch error}
-	<p>An error occurred!</p>
-{/await}
-
 
 <style>
 
